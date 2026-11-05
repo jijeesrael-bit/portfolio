@@ -10,6 +10,48 @@
 </head>
 <body>
   <header>
+    <canvas id="logo" width="120" height="120">Jije Israel logo</canvas>
+    <script>
+    // 1. Logo Script
+    const canvas = document.getElementById('logo');
+    const ctx = canvas.getContext('2d');
+
+    // Blue square background
+    ctx.fillStyle = '#1f5fa8';
+    ctx.fillRect(0, 0, 120, 120);
+
+    // White circle
+    ctx.beginPath();
+    ctx.arc(60, 60, 45, 0, 2 * Math.PI);
+    ctx.fillStyle = 'white';
+    ctx.fill();
+
+    // Initials in the middle
+    ctx.fillStyle = '#1f5fa8';
+    ctx.font = 'bold 36px Arial';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    ctx.fillText('JI', 60, 62);
+
+    // 2. Skills Bar Chart Script (Your Turn)
+    const chartCanvas = document.getElementById('skillsChart');
+    const chartCtx = chartCanvas.getContext('2d');
+
+    // Draw background for chart area
+    chartCtx.fillStyle = '#f4f4f4';
+    chartCtx.fillRect(0, 0, 300, 150);
+
+    // Draw bars based on your skills (HTML: 80% = 96px, Python: 70% = 84px, C++: 75% = 90px)
+    // HTML Bar
+    chartCtx.fillStyle = '#1f5fa8';
+    chartCtx.fillRect(30, 130 - 96, 50, 96);
+    
+    // Python Bar
+    chartCtx.fillRect(110, 130 - 84, 50, 84);
+
+    // C++ Bar
+    chartCtx.fillRect(190, 130 - 90, 50, 90);
+</script>
      <h1> Jije Israel. </h1>
      <p>Software Engineering student and web developer for now.</p>
     <button type="button" onclick="document.getElementById('hireDialog').showModal()">Hire me</button>
@@ -120,6 +162,37 @@
     <label for="lvl-cpp">C++</label>
     <meter id="lvl-cpp" value="0.75" min="0" max="1" low="0.3" high="0.7" optimum="1">75%</meter>
 </p>
+        <canvas id="skillsChart" width="300" height="150"></canvas>
+<canvas id="skillsChart" width="300" height="150"></canvas>
+
+<script>
+    const chartCanvas = document.getElementById('skillsChart');
+    const chartCtx = chartCanvas.getContext('2d');
+
+    // Optional: background clear or fill
+    chartCtx.fillStyle = '#ffffff';
+    chartCtx.fillRect(0, 0, 300, 150);
+
+    // Skill 1: HTML (80% -> height = 96px)
+    chartCtx.fillStyle = '#1f5fa8';
+    chartCtx.fillRect(30, 130 - 96, 40, 96);
+    chartCtx.fillStyle = '#000000';
+    chartCtx.font = '12px Arial';
+    chartCtx.textAlign = 'center';
+    chartCtx.fillText('HTML', 50, 142);
+
+    // Skill 2: Python (70% -> height = 84px)
+    chartCtx.fillStyle = '#1f5fa8';
+    chartCtx.fillRect(100, 130 - 84, 40, 84);
+    chartCtx.fillStyle = '#000000';
+    chartCtx.fillText('Python', 120, 142);
+
+    // Skill 3: C++ (75% -> height = 90px)
+    chartCtx.fillStyle = '#1f5fa8';
+    chartCtx.fillRect(170, 130 - 90, 40, 90);
+    chartCtx.fillStyle = '#000000';
+    chartCtx.fillText('C++', 190, 142);
+</script>
 <h3>Tools I Use</h3>
 <dl>
     <dt>VS Code</dt>
