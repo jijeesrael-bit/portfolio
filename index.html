@@ -36,7 +36,7 @@
         <p>My instructor always says <q>practice beats theory</q>, so I code every day.</p>
         <p>Book I'm reading:<cite>Clean Code</cite>by Robert C. Martine</p>
     </aside>
-      <select id="skills">
+      <section id="skills">
         <h2>Skills</h2>
         
          <h3>My first program</h3>
@@ -94,8 +94,8 @@
     <dt>Git and GitHub.</dt>
     <dd>Saves versions of my code and shares my projects online.</dd>
 </dl>
-      </select>
-    <select id="projects">
+      </section>
+    <section id="projects">
      <h2>Projects</h2>
       <article>
        <h3>Simple Calculator</h3>
@@ -115,8 +115,8 @@
        <p><a herf="projects.html">see all my projects</a></p>
         </article>
       <p><a herf="projects.html">see all my projects-</a></p>
-    </select>
-    <select id="education">
+    </section>
+    <section id="education">
     <h2>Education</h2>
        <h3>BSC in Software Engineering</h3>
        <p>Currently studying at AASTU</p>
@@ -178,8 +178,8 @@
         </tr>
     </tfoot>
 </table>
-    </select>
-    <select id="cantact">
+    </section>
+    <section id="cantact">
     <h2>Contacts</h2>
     <p>You can contact me via email or through my social links</p>
     <h2 id="contact">Contact</h2>
@@ -189,7 +189,80 @@
 <p>GitHub: <a href="https://github.com/jijeesrael-bit">github.com/jijeesrael-bit</a></p>
 <p>LinkedIn: <a href="https://www.linkedin.com/in/jije">linkedin.com/in/jije</a></p>
 <p><a href="files/cv.pdf" download>Download my CV (PDF)</a></p>
-    </select>
+    </section>
+    
+    <h3 id="contact">Send me a message</h3>
+<form action="thank-you.html" method="get">
+    <fieldset>
+        <legend>Your Details</legend>
+        <label for="fullname">Full name:</label>
+        <input type="text" id="fullname" name="fullname">
+        <br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+    </fieldset>
+<fieldset>
+        <legend>Project Details</legend>
+        <label for="phone">Phone (optional):</label>
+        <input type="text" id="phone" name="phone" pattern="0[79][0-9]{8}" title="10 digits starting with 09 or 07">
+        <br><br>
+         <p>Preferred contact method:</p>
+        <input type="radio" id="by-email" name="contact-method" value="email" checked>
+        <label for="by-email">Email</label>
+        <input type="radio" id="by-phone" name="contact-method" value="phone">
+        <label for="by-phone">Phone</label>
+        <br><br>
+
+        <label for="meeting">Preferred meeting date:</label>
+        <input type="date" id="meeting" name="meeting" min="2026-11-01">
+        <br><br>
+
+        <label for="weeks">Project length (weeks):</label>
+        <input type="number" id="weeks" name="weeks" min="1" max="52" step="1">
+        <br><br>
+
+        <label for="brief">Attach a project brief:</label>
+        <input type="file" id="brief" name="brief">
+        <br><br>
+  <label for="brief">Attach a project brief:</label>
+        <input type="file" id="brief" name="brief">
+        <br><br>
+
+        <label for="colour">Preferred website colour:</label>
+        <input type="color" id="colour" name="colour" value="#1f5fa8">
+        <br><br>
+
+        <label for="rating">How much do you like my portfolio? (1-10)</label>
+        <input type="range" id="rating" name="rating" min="1" max="10" value="7">
+    </fieldset>
+    <fieldset>
+        <legend>Your Message</legend>
+        <label for="reason">Reason for contacting me:</label>
+        <select id="reason" name="reason">
+            <optgroup label="Work">
+                <option value="internship">Internship offer</option>
+                <option value="freelance">Freelance project</option>
+                <option value="job">Full-time job</option>
+            </optgroup>
+            <optgroup label="Study">
+                <option value="group-project">Group project</option>
+                <option value="tutoring">Tutoring</option>
+            </optgroup>
+            <option value="other">Other</option>
+        </select>
+        <br><br>
+
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="6" cols="40" placeholder="Type your message here..."></textarea>
+        <br><br>
+      <input type="checkbox" id="copy" name="copy" value="yes">
+      <lable for="copy">Send me a copy of this message.</lable>
+      <br><br>
+        <button type="submit">Send Message</button>
+        <button type="reset">Clear</button>
+    </fieldset>
+
+</form>
   </main>
   <footer>
     <p>Copyrights 2026 Jije Israel. All rights reserved.</p>
