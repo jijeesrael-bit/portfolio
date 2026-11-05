@@ -12,6 +12,14 @@
   <header>
      <h1> Jije Israel. </h1>
      <p>Software Engineering student and web developer for now.</p>
+    <button type="button" onclick="document.getElementById('hireDialog').showModal()">Hire me</button>
+
+<dialog id="hireDialog">
+    <h2>Available for internships</h2>
+    <p>I am available for internships and freelance web projects from June 2027.</p>
+    <p><a href="#contact">Send me a message</a> or <a href="files/cv.pdf" download>download my CV</a>.</p>
+    <button type="button" onclick="document.getElementById('hireDialog').close()">Close</button>
+</dialog>
      <nav>
         <a herf="about">About me</a>
         <a herf="skills">Skills</a>
@@ -27,7 +35,8 @@
      <selection id="about">
       <h2>About Me</h2>
      <p>I'm a 3<sup>rd</sup> year <strong>Software Engineering</strong> student. I <em>love coding</em> beacause <em>it makes our lifes more interesting and simple.</em> My goal is to <mark>become a full-stack developer.</mark></p>
-      <h3>Hear my introduction</h3>
+     <p>My favourite tag is &lt;main&gt;, because it tells the browser where the important content is &amp; helps screen readers.</p>
+       <h3>Hear my introduction</h3>
        <audio controls>
          <source scr="media/intro.mp3" type="audio/mpeg">
          Your browser doesn't support the audio element.
@@ -94,6 +103,23 @@
     <li>PHP and database</li>
     <li>Deploy my portfolio online</li>
 </ol>
+  <h3>Skill Levels</h3>
+<p>
+    <label for="lvl-html">HTML</label>
+    <meter id="lvl-html" value="0.8" min="0" max="1">80%</meter>
+</p>
+<p>
+    <label for="lvl-python">Python</label>
+    <meter id="lvl-python" value="0.7" min="0" max="1">70%</meter>
+</p>
+<p>
+    <label for="lvl-js">JavaScript</label>
+    <meter id="lvl-js" value="0.2" min="0" max="1" low="0.3" high="0.7" optimum="1">20%</meter>
+</p>
+<p>
+    <label for="lvl-cpp">C++</label>
+    <meter id="lvl-cpp" value="0.75" min="0" max="1" low="0.3" high="0.7" optimum="1">75%</meter>
+</p>
 <h3>Tools I Use</h3>
 <dl>
     <dt>VS Code</dt>
@@ -127,8 +153,16 @@
     </section>
     <section id="education">
     <h2>Education</h2>
+      <abbr title="HyperText Markup Language">HTML</abbr>
+<abbr title="Addis Ababa Science and Technology University">AASTU</abbr>
+<abbr title="Curriculum Vitae">CV</abbr>
        <h3>BSC in Software Engineering</h3>
-       <p>Currently studying at AASTU</p>
+      <p>Addis Ababa Science and Technology University, 
+<time datetime="2023-09">September 2023</time> - present</p>
+      <p>
+    <label for="degree">Degree progress:</label>
+    <progress id="degree" value="40" max="100">40%</progress> 40%
+</p>
        <table border="1" cellpadding="8" cellspacing="0">
     <caption>Academic Record - BSc in Software Engineering</caption>
     <thead>
@@ -196,7 +230,7 @@
         title="Map of my university campus"> </iframe>
 <p>Address: <br>Addis Ababa, <br>Ethiopia</p>
 <p>Email: <a href="mailto:jije.israel@gmail.com">jije.israel@gmail.com</a></p>
-<p>Phone: <a href="tel:+251913272507">+251 913272507</a></p>
+<p>Phone: <a href="tel:+251913272507">+251&nbsp;91&nbsp;327&nbsp;25&nbsp;07</a></p>
 <p>GitHub: <a href="https://github.com/jijeesrael-bit">github.com/jijeesrael-bit</a></p>
 <p>LinkedIn: <a href="https://www.linkedin.com/in/jije">linkedin.com/in/jije</a></p>
 <p><a href="files/cv.pdf" download>Download my CV (PDF)</a></p>
@@ -350,7 +384,8 @@
 </form>
   </main>
   <footer>
-    <p>Copyrights 2026 Jije Israel. All rights reserved.</p>
+    <p>&copy; 2026 Jije Israel. All rights reserved.</p>
+    <p>Last updated: <time datetime="2026-11-06">6 November 2026</time></p>
   </footer>
     </body>
      </html>
